@@ -17,6 +17,17 @@ body {
 
 }
 
+
+.box3 {
+    background-color: #b1b1b1;
+    border: 2px, solid #b1b1b1;
+}
+
+.box3:hover {
+    transform: translate(400px,10px)
+}
+
+
 .archive-card:hover {
     /* transform: translateY(-10px); */
     background-color: #0488f5;
