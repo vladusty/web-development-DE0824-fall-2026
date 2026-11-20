@@ -31,6 +31,22 @@
     font-size: 18px;
 }
 
+/* Smartphone: less than 576px */
+@media screen and (max-width: 575px) {
+
+}
+
+/* Tablet: from 576px to less than 992px */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+
+}
+
+/* Desktop: 992px and wider */
+@media screen and (min-width: 992px) {
+
+}
+
+
 /*
 .collections {
     display: grid;
