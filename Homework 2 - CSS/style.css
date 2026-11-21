@@ -47,6 +47,45 @@
 }
 
 
+/* we can introduce screen width based media queries to change the layout of the grid
+@media (max-width: 768px) {
+    .collections {
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 200px 200px 200px;
+        grid-template-areas:
+            "manuscript newspapers"
+            "photographs maps"
+            "letters books";
+    }
+
+    .collection {
+        background-color: #bec244;
+    }
+}
+
+/* let's do one more at a smaller screen width */
+/* @media (max-width: 480px) {
+    .collections {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "manuscript"
+            "newspapers"
+            "photographs"
+            "maps"
+            "letters"
+            "books";
+    }
+
+    .collection {
+        background-color: #be1919;
+    }
+}  */
+
+
+
+
+
 /*
 .collections {
     display: grid;
