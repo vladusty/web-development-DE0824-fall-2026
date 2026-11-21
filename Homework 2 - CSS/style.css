@@ -3,6 +3,23 @@
     color:rgb(235, 235, 235);
 }
 
+.global-nav nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+.global-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.tools {
+    margin-top: 25px;
+    display: flex;
+}
+
 .advertisement {
     background-color: #3e4430;
     padding: 15px;
@@ -30,6 +47,23 @@
     margin: 0;
     font-size: 18px;
 }
+
+.page-header {
+    display: grid;
+    grid-template-columns: 2fr 7fr 3fr;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 6fr 3fr 3fr;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 6fr 3fr 3fr;
+}
+
+
 
 /* Smartphone: less than 576px */
 @media screen and (max-width: 575px) {
