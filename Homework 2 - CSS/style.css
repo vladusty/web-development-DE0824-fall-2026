@@ -20,12 +20,12 @@
     display: flex;
 }
 
-.advertisement {
+.ad {
     background-color: #3e4430;
     padding: 15px;
 }
 
-.advertisement a {
+.ad a {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -33,7 +33,7 @@
     color: rgb(223, 187, 28)
 }
 
-.advertisement img {
+.ad img {
     width: 80px;
     height: auto;
 }
@@ -48,103 +48,84 @@
     font-size: 18px;
 }
 
-.page-header {
-    display: grid;
-    grid-template-columns: 2fr 7fr 3fr;
-}
-
-.hero {
-    display: grid;
-    grid-template-columns: 6fr 3fr 3fr;
-}
-
-.body {
-    display: grid;
-    grid-template-columns: 6fr 3fr 3fr;
-}
 
 
 
 /* Smartphone: less than 576px */
 @media screen and (max-width: 575px) {
+    .desktop-ad {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .page-header {
+        display: flex;
+    }
+
+    .hero-feature {
+        display: none;
+    }
+
+    .body {
+        display: flex;
+    }
 
 }
 
 /* Tablet: from 576px to less than 992px */
 @media screen and (min-width: 576px) and (max-width: 991px) {
+    .desktop-ad {
+        display: none;
+    }
+
+    .page-header {
+        display: grid;
+        grid-template-columns: 3fr 6fr 3fr;
+    }
+
+    .hero {
+        display: flex;
+    }
+
+    .body {
+        display: grid;
+        grid-template-columns: 9fr 3fr;
+    }
+
+    .article-listing {
+        grid-column: 1 / 3;
+    }
 
 }
 
 /* Desktop: 992px and wider */
 @media screen and (min-width: 992px) {
-
-}
-
-
-/* we can introduce screen width based media queries to change the layout of the grid
-@media (max-width: 768px) {
-    .collections {
-        grid-template-columns: 25% 75%;
-        grid-template-rows: 200px 200px 200px;
-        grid-template-areas:
-            "manuscript newspapers"
-            "photographs maps"
-            "letters books";
+    .mobile-ad {
+        display: none;
     }
 
-    .collection {
-        background-color: #bec244;
-    }
-}
-
-/* let's do one more at a smaller screen width */
-/* @media (max-width: 480px) {
-    .collections {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "manuscript"
-            "newspapers"
-            "photographs"
-            "maps"
-            "letters"
-            "books";
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 10px;
     }
 
-    .collection {
-        background-color: #be1919;
+    .page-header {
+        display: grid;
+        grid-template-columns: 2fr 7fr 3fr;
     }
-}  */
 
-
-
-
-
-/*
-.collections {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
- @media (min-width: 700px) {
-    .collections {
-        grid-template-columns: repeat(3, 1fr);
+    .hero {
+        display: grid;
+        grid-template-columns: 6fr 3fr;
     }
-}
 
-.archive-page {
-    display: grid;
-    grid-template-areas:
-        "header  header"
-        "filters results"
-        "footer  footer";
-    grid-template-columns: 220px 1fr;
-    gap: 1rem;
-}
+    .body {
+        display: grid;
+        grid-template-columns: 6fr 3fr;
+    }
 
-.site-header { grid-area: header; }
-.filters     { grid-area: filters; }
-.results     { grid-area: results; }
-.site-footer { grid-area: footer; }
-*/
+}
