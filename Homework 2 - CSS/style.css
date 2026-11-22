@@ -1,4 +1,65 @@
 /* GENERAL STYLE */
+/* General */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F0;
+    color: #252525;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.brand h2 {
+    color: white;
+}
+
+main {
+    padding: 15px;
+    gap: 25px;
+}
+
+/* Headings */
+h2, h3 {
+    color: #004C2F;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Links */
+a {
+    color: #004C2F;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.return-to-top {
+    margin-top: 15px;
+}
+
+.ad-text h2 {
+    color: rgb(223, 187, 28);
+}
+
 /* Header */
 .page-header {
     background-color: rgb(0, 76, 47);
@@ -19,7 +80,7 @@
     transition: background-color 250ms ease;
 }
 
-.global-nav a:hover {
+a:hover {
     color: rgb(255, 0, 0);
     background-color: #52633A;
     border-radius: 4px;
@@ -31,15 +92,13 @@
     display: flex;
 }
 
-.body img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* Advertisement */
 .ad {
     background-color: #3e4430;
-    padding: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ad a {
@@ -57,7 +116,7 @@
 
 .ad-text h2 {
     margin: 0;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .ad-text p {
@@ -66,9 +125,8 @@
 }
 
 /* Body */
-
 .body {
-    gap: 15px;
+    gap: 25px;
 }
 
 /* GRID AREA NAMES */
@@ -88,6 +146,7 @@
 /* 2. Hero */
 .hero {
     grid-area: hero;
+    gap: 25px;
 }
 
 .hero-feature {
@@ -101,9 +160,13 @@
 /* 3. Ad */
 .mobile-ad {
     grid-area: mobile-ad;
+
 }
 
 .desktop-ad {
+    display: none;
+    justify-content: center;
+    align-items: center;
     grid-area: ad;
 }
 
@@ -127,91 +190,4 @@
 
 .desktop-ad {
     display: none;
-}
-
-/* RESPONSIVENESS */
-/* Smartphone: less than 576px */
-@media (max-width: 575.98px) {
-    .page-header {
-        display: grid;
-        grid-template-columns: 3fr 2fr;
-        grid-template-areas:
-            "brand brand"
-            "global-nav tools";
-    }
-
-    .hero-feature {
-        display: none;
-    }
-
-    .sidebar {
-        display: none;
-    }
-}
-
-/* Tablet: from 576px to less than 992px */
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .page-header {
-        display: grid;
-        grid-template-columns: 2.5fr 6.5fr 3fr;
-        grid-template-areas:
-            "brand global-nav tools";
-    }
-
-    .hero {
-        display: grid;
-        grid-template-areas:
-            "hero-feature"
-            "hero-call-to-action";
-    }
-
-    .body {
-        display: grid;
-        grid-template-columns: 9fr 3fr; 
-        grid-template-areas:
-            "article-feature mobile-ad"
-            "article-listing article-listing";
-    }
-
-}
-
-/* Desktop: 992px and wider */
-@media (min-width: 992px) {
-    main {
-        display: grid;
-        grid-template-columns: 9fr 3fr;
-        grid-template-areas:
-            "hero ad"
-            "body sidebar";
-    }
-
-    .page-header {
-        display: grid;
-        grid-template-columns: 2fr 7fr 3fr;
-        grid-template-areas:
-            "brand global-nav tools";
-    }
-
-    .hero {
-        display: grid;
-        grid-template-columns: 6fr 3fr;
-        grid-template-areas:
-            "hero-feature hero-call-to-action";
-    }
-
-    .body {
-        display: grid;
-        grid-template-columns: 3fr 6fr; 
-        grid-template-areas:
-            "article-feature article-listing";
-    }
-
-    .mobile-ad {
-        display: none;
-    }
-
-    .desktop-ad {
-        display: block;
-    }
-    
 }
