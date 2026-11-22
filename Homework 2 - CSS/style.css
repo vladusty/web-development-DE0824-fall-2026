@@ -1,6 +1,8 @@
+/* GENERAL STYLE */
+/* Header */
 .page-header {
     background-color: rgb(0, 76, 47);
-    color:rgb(235, 235, 235);
+    color: rgb(235, 235, 235);
     align-items: center;
     padding: 10px;
 }
@@ -8,26 +10,18 @@
 .global-nav nav {
     display: flex;
     justify-content: space-evenly;
-
 }
 
 .global-nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    transition: background-color 250ms ease;
 }
 
-/* .global-nav a:hover {
+.global-nav a:hover {
     color: rgb(255, 0, 0);
     background-color: #52633A;
-    transition: background-color 250ms ease;
-    border-radius: 4px;
-} */
-
-a:hover {
-    color: rgb(255, 0, 0);
-    background-color: #52633A;
-    transition: background-color 250ms ease;
     border-radius: 4px;
     box-shadow: 5px 5px 5px black;
     scale: 110%;
@@ -37,6 +31,12 @@ a:hover {
     display: flex;
 }
 
+.body img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Advertisement */
 .ad {
     background-color: #3e4430;
     padding: 15px;
@@ -47,7 +47,7 @@ a:hover {
     align-items: center;
     gap: 15px;
     text-decoration: none;
-    color: rgb(223, 187, 28)
+    color: rgb(223, 187, 28);
 }
 
 .ad img {
@@ -65,91 +65,153 @@ a:hover {
     font-size: 18px;
 }
 
+/* Body */
+
+.body {
+    gap: 15px;
+}
+
+/* GRID AREA NAMES */
+/* 1. Header */
+.brand {
+    grid-area: brand;
+}
+
+.global-nav {
+    grid-area: global-nav;
+}
+
+.tools {
+    grid-area: tools;
+}
+
+/* 2. Hero */
+.hero {
+    grid-area: hero;
+}
+
+.hero-feature {
+    grid-area: hero-feature;
+}
+
+.hero-call-to-action {
+    grid-area: hero-call-to-action;
+}
+
+/* 3. Ad */
+.mobile-ad {
+    grid-area: mobile-ad;
+}
+
+.desktop-ad {
+    grid-area: ad;
+}
+
+.body {
+    grid-area: body;
+}
+
+/* 4. Body */
+.article-feature {
+    grid-area: article-feature;
+}
+
+.article-listing {
+    grid-area: article-listing;
+}
+
+/* 5. Sidebar */
+.sidebar {
+    grid-area: sidebar;
+}
+
+.desktop-ad {
+    display: none;
+}
+
+/* RESPONSIVENESS */
 /* Smartphone: less than 576px */
-@media screen and (max-width: 575px) {
+@media (max-width: 575.98px) {
     .page-header {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas:
+            "brand brand"
+            "global-nav tools";
     }
 
-    .brand {
-        grid-column: 1 / 3;
-    }
-
-    .desktop-ad {
+    .hero-feature {
         display: none;
     }
 
     .sidebar {
         display: none;
     }
-
-
-    .hero-feature {
-        display: none;
-    }
-
-    .body {
-        display: grid;
-    }
-
 }
 
 /* Tablet: from 576px to less than 992px */
-@media screen and (min-width: 576px) and (max-width: 991px) {
-    .desktop-ad {
-        display: none;
-    }
-
+@media (min-width: 576px) and (max-width: 991.98px) {
     .page-header {
         display: grid;
-        grid-template-columns: 3fr 6fr 3fr;
+        grid-template-columns: 2.5fr 6.5fr 3fr;
+        grid-template-areas:
+            "brand global-nav tools";
     }
 
     .hero {
-        display: flex;
+        display: grid;
+        grid-template-areas:
+            "hero-feature"
+            "hero-call-to-action";
     }
 
     .body {
         display: grid;
-        grid-template-columns: 9fr 3fr;
-    }
-
-    .article-listing {
-        grid-column: 1 / 3;
+        grid-template-columns: 9fr 3fr; 
+        grid-template-areas:
+            "article-feature mobile-ad"
+            "article-listing article-listing";
     }
 
 }
 
 /* Desktop: 992px and wider */
-@media screen and (min-width: 992px) {
-    .mobile-ad {
-        display: none;
-    }
-
+@media (min-width: 992px) {
     main {
         display: grid;
-        grid-template-columns: 3fr 1fr;
-        gap: 10px;
+        grid-template-columns: 9fr 3fr;
+        grid-template-areas:
+            "hero ad"
+            "body sidebar";
     }
 
     .page-header {
         display: grid;
         grid-template-columns: 2fr 7fr 3fr;
+        grid-template-areas:
+            "brand global-nav tools";
     }
 
     .hero {
         display: grid;
         grid-template-columns: 6fr 3fr;
+        grid-template-areas:
+            "hero-feature hero-call-to-action";
     }
 
     .body {
         display: grid;
-        grid-template-columns: 6fr 3fr;
+        grid-template-columns: 3fr 6fr; 
+        grid-template-areas:
+            "article-feature article-listing";
     }
 
-    .brand {
-        display: flex;
+    .mobile-ad {
+        display: none;
     }
 
+    .desktop-ad {
+        display: block;
+    }
+    
 }
