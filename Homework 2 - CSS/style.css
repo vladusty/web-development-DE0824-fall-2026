@@ -1,4 +1,17 @@
 /* GENERAL STYLE */
+/* Main content boxes */
+.hero-feature, .hero-call-to-action, .article-feature, .article-listing, .sidebar {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.hero, .body {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 /* General */
 * {
     box-sizing: border-box;
@@ -13,6 +26,8 @@ body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     padding: 15px;
     gap: 25px;
 }
@@ -95,6 +110,8 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid black;
+    border-radius: 6px;
 }
 
 .ad a {
@@ -120,11 +137,6 @@ a:hover {
     font-size: 18px;
 }
 
-/* Body */
-.body {
-    gap: 25px;
-}
-
 /* GRID AREA NAMES */
 /* 1. Header */
 .brand {
@@ -141,7 +153,6 @@ a:hover {
 
 /* 2. Hero */
 .hero {
-    grid-area: hero;
     gap: 25px;
 }
 
@@ -156,7 +167,6 @@ a:hover {
 /* 3. Ad */
 .mobile-ad {
     grid-area: mobile-ad;
-
 }
 
 .desktop-ad {
