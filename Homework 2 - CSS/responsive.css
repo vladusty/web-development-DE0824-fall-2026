@@ -1,3 +1,60 @@
+/* GRID AREA NAMES */
+/* 1. Header */
+.brand {
+    grid-area: brand;
+}
+
+.global-nav {
+    grid-area: global-nav;
+}
+
+.tools {
+    grid-area: tools;
+}
+
+/* 2. Hero */
+.hero {
+    grid-area: hero;
+}
+
+.hero-feature {
+    grid-area: hero-feature;
+}
+
+.hero-call-to-action {
+    grid-area: hero-call-to-action;
+}
+
+/* 3. Ad */
+.mobile-ad {
+    grid-area: mobile-ad;
+}
+
+.desktop-ad {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    grid-area: ad;
+}
+
+.body {
+    grid-area: body;
+}
+
+/* 4. Body */
+.article-feature {
+    grid-area: article-feature;
+}
+
+.article-listing {
+    grid-area: article-listing;
+}
+
+/* 5. Sidebar */
+.sidebar {
+    grid-area: sidebar;
+}
+
 /* Smartphone: less than 576px */
 @media (max-width: 575.98px) {
     .page-header {
