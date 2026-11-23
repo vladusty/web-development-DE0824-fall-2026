@@ -61,6 +61,8 @@ a:hover {
 .global-nav nav {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 4px 12px;
 }
 
 .global-nav a {
@@ -76,6 +78,10 @@ a:hover {
 
 .tools {
     display: flex;
+}
+
+.tools input {
+    width: 100%;
 }
 
 /* 2. Hero */
